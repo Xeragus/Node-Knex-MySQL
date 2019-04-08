@@ -1,9 +1,9 @@
+require('dotenv').config()
 const http = require('http')
-const port = process.env.port || 3000
 const app = require('./app')
 const server = http.createServer(app)
 
-server.listen(3000)
+server.listen(process.env.PORT)
 
 // let mysql = require('mysql')
 // let connection = mysql.createConnection({
