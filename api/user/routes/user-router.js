@@ -7,7 +7,8 @@ const store = require('./store')
 router.post('/create', (req, res) => {
     store.create({
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
+        name: req.body.name
     })
     .then(() => res.sendStatus(200))
 })
